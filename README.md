@@ -3,6 +3,7 @@
 "Less thinkingg, more hacking"
 
 Golang hacking rules:
+
 1. Close all the browser tabs first except one
 
 2. Look at some pre written code and copy it 
@@ -24,6 +25,7 @@ Golang hacking rules:
 11. gogogogogogogogogogogogogoggogogogogo!!!
 
 Tips:
+
 1. Use https://sourcegraph.com to quickly understand the code you're hacking 
 
 2. Use reddit.com/golang for ideas 
