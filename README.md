@@ -4,7 +4,7 @@
 
 Golang hacking rules:
 1. Close all the browser tabs first except one
-2. Look at some pre written code and copy it
+2. Look at some pre written code and copy it 
 3. Start modifying the code 
 4. No learning/videos during the hack hour
 6. Only other app allowed is a music app maybe
