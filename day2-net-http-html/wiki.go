@@ -10,6 +10,10 @@ import (
 	"regexp"
 )
 
+var (
+	addr = flag.Bool("addr", false, "find open address and print to final-port.txt")
+)
+
 type Page struct {
 	Title string
 	Body  []byte
@@ -67,7 +71,6 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
 }
 
 var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
-var addr = flag.Bool("addr", false, "find open address and print to final-port.txt")
 
 func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
@@ -99,5 +102,6 @@ func main() {
 		s.Serve(l)
 		return
 	}
+
 	http.ListenAndServe(":8080", nil)
 }
