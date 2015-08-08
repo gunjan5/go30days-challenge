@@ -12,4 +12,4 @@ Golang hacking rules:
 8. Do this for 30 days
 9. I skipped #5, but you're too distracted to notice it
 10. Pick any random Golang repo and Github and hack it
-11. gogogogogogogogogogogogogoggogogogogo!!!
+11. gogogogogogogogogogogogogoggogogogogo!!! 
