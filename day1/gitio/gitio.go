@@ -21,7 +21,7 @@ const gitioAPI = "http://git.io/create"
 // Shorten returns a short version of an URL, or an error otherwise.
 // Please note that it's not guaranteed the code will be accepted by git.io,
 // the random one may be used instead.
-func Shorten(longUrl) (shortURL *url.URL, err error) {
+func Shorten(longUrl string) (shortURL *url.URL, err error) {
 	fmt.Println(longUrl)
 
 
