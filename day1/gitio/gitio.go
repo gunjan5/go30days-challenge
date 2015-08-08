@@ -22,9 +22,6 @@ const gitioAPI = "http://git.io/create"
 // Please note that it's not guaranteed the code will be accepted by git.io,
 // the random one may be used instead.
 func Shorten(longUrl string) (shortURL *url.URL, err error) {
-	fmt.Println(longUrl)
-
-
 	if len(longUrl) == 0 {
 		return nil, errors.New("no URL provided")
 	}
