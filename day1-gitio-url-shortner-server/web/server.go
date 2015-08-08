@@ -4,7 +4,7 @@ import (
     "fmt"
     "io/ioutil"
     "net/http"
-    "github.com/gunjan5/go30days-challenge/day1/gitio"
+    "github.com/gunjan5/go30days-challenge/day1-gitio-url-shortner-server/gitio"
 )
 
 var (
