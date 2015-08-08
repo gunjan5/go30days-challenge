@@ -7,3 +7,7 @@ TIL:
 -mFlag is a really nice tool for multiple-flag CLI parsing in golang
 -./example -s red ./example --string blue
 -https://github.com/docker/docker/tree/master/pkg/mflag
+-net/http simple example https://gist.github.com/gunjan5/3c5aab16396c8a483d4d
+-A lot of good Golang stuff online is in Chinese, use google translate!
+
+ 
