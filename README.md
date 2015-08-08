@@ -13,3 +13,12 @@ Golang hacking rules:
 9. I skipped #5, but you're too distracted to notice it
 10. Pick any random Golang repo and Github and hack it
 11. gogogogogogogogogogogogogoggogogogogo!!!
+
+Tips:
+1. Use https://sourcegraph.com to quickly understand the code you're hacking 
+
+2. Use reddit.com/golang for ideas 
+
+3. Listen to video game music playlist from my spotify: https://open.spotify.com/user/patelgunjan5/playlist/5MzpaOxp8HTux6wUxkCAtX
+
+4. Coffee!!
