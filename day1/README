@@ -1,0 +1,4 @@
+1. git clone xlab/gitio
+2. go to $GOROOT/go/pkg and do go get github.com/xlab/gitio/...
+3. go run cmd/gitio/main.go http://gunjan5.github.io/django-docker/
+http://git.io/v3eKr
