@@ -3,7 +3,7 @@ package main
 import (
     "fmt"
     "net/http"
-    "gunjan5/go30days-challenge/tree/master/day1/gitio"
+    "github.com/gunjan5/go30days-challenge/day1/gitio"
 )
 
 var (

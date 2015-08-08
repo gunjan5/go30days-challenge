@@ -21,7 +21,7 @@ const gitioAPI = "http://git.io/create"
 // Shorten returns a short version of an URL, or an error otherwise.
 // Please note that it's not guaranteed the code will be accepted by git.io,
 // the random one may be used instead.
-func Shorten(longURL, code string) (shortURL *url.URL, err error) {
+func Shorten(longURL) (shortURL *url.URL, err error) {
 	if len(longURL) == 0 {
 		return nil, errors.New("no URL provided")
 	}
@@ -30,12 +30,7 @@ func Shorten(longURL, code string) (shortURL *url.URL, err error) {
 	form.Add("url", longURL)
 
 	var api string
-	if len(code) > 0 {
-		form.Add("code", code)
-		api = gitioPutAPI
-	} else {
-		api = gitioPostAPI
-	}
+	api = gitioPostAPI
 
 	resp, err := http.PostForm(api, form)
 	if err != nil {

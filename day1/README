@@ -9,5 +9,5 @@ TIL:
 -https://github.com/docker/docker/tree/master/pkg/mflag
 -net/http simple example https://gist.github.com/gunjan5/3c5aab16396c8a483d4d
 -A lot of good Golang stuff online is in Chinese, use google translate!
-
+-When you do go get github.com/gunjan5/stuff/stufff, it downloads the binary in $GOPATH/src/github.com/gunjan5/stuff/stufff
  

@@ -48,4 +48,5 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Println(shortURL)
+	fmt.Printf("codeOPt is this", codeOpt)
 }
