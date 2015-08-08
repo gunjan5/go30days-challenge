@@ -1,0 +1,9 @@
+1. git clone xlab/gitio
+2. go to $GOROOT/go/pkg and do go get github.com/xlab/gitio/...
+3. go run cmd/gitio/main.go http://gunjan5.github.io/django-docker/
+http://git.io/v3eKr
+
+TIL: 
+-mFlag is a really nice tool for multiple-flag CLI parsing in golang
+-./example -s red ./example --string blue
+-https://github.com/docker/docker/tree/master/pkg/mflag
