@@ -7,15 +7,13 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var upgrader = websocket.Upgrader{
-    ReadBufferSize:  1024,
-    WriteBufferSize: 1024,
-}
-
 func wsHandler ( w http.ResponseWriter, r *http.Request) {
 
-	conn, err := upgrader.Upgrade(w,r, nil)
-	if err != nil {
+	conn, err := websocket.Upgrade(w,r, nil, 1024, 1024)
+	if _,ok := err.(websocket.HandshakeError); ok {
+		http.Error(w, "Not a websocket handshake", 400)
+		return
+	} else if err != nil {
 		log.Println(err)
 		return
 	}
@@ -39,7 +37,7 @@ func main() {
 	http.HandleFunc("/ws", wsHandler)
 
 	log.Printf("Running on localhost:8080")
-	addr := fmt.Sprintf("127.0.0.1:8080")
+	addr := fmt.Sprintf("127.0.0.1:80")
 	// this call blocks -- the progam runs here forever
 	err := http.ListenAndServe(addr, nil)
 	fmt.Println(err.Error())
