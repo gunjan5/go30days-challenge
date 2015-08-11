@@ -13,7 +13,8 @@
 			<li ng-repeat="m in messages track by $index">{{m}}</li>
 		</ul>
 	</div>
-		<input type="text" placeholder="type here" ng-model="msg" ng-enter="send()"><button class="btn btn-primary" ng-click="send()">Send</button>
+		<input type="text" placeholder="type here" ng-model="msg" ng-enter="send()">
+		<button class="btn btn-primary" ng-click="send()">Send</button>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 <script>
   var app = angular.module("chat", []);
