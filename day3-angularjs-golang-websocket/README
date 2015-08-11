@@ -1,1 +1,4 @@
 ngularJs for client side and Golang for backend
+
+Use sudo while running this.
+Need root access to open a socket on port 80
