@@ -7,6 +7,18 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+
+
+var connections map[*websocket.Conn] bool
+
+func sendAll(msg []byte) {
+	for conn := range connections {
+		if err := conn.WriteMessage(websocket.TextMessage, msg); err != nil {
+			delete(connections, conn)
+		      return
+	}
+}
+}
 func wsHandler ( w http.ResponseWriter, r *http.Request) {
 
 	conn, err := websocket.Upgrade(w,r, nil, 1024, 1024)
@@ -18,19 +30,21 @@ func wsHandler ( w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer conn.Close()
+	connections[conn] = true
 	for {
 		_, msg, err := conn.ReadMessage() 
 		if err != nil {
+			delete(connections, conn)
 			return
 		}
 		log.Println(string(msg))
-		if err = conn.WriteMessage(websocket.TextMessage, msg); err != nil {
-			return
-		}
+		sendAll(msg)
 
 	}
 }
 func main() {
+
+	connections = make(map[*websocket.Conn] bool)
 	// handle all requests by serving a file of the same name
 	fileHandler := http.FileServer(http.Dir("web/"))
 	http.Handle("/", fileHandler)

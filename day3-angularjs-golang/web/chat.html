@@ -8,8 +8,12 @@
 	<div class="jumbotron">
 		<h1>Chat</h1>
 	</div>
-	{{messages}}
-		<input type="text" placeholder="type here" ng-model="msg"><button class="btn btn-primary" ng-click="send()">Send</button>
+	<div id="chat">
+		<ul>
+			<li ng-repeat="m in messages track by $index">{{m}}</li>
+		</ul>
+	</div>
+		<input type="text" placeholder="type here" ng-model="msg" ng-enter="send()"><button class="btn btn-primary" ng-click="send()">Send</button>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
 <script>
   var app = angular.module("chat", []);
