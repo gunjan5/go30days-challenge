@@ -1,0 +1,11 @@
+{
+	"ImportPath": "github.com/marioidival/bro",
+	"GoVersion": "go1.4.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-113-g55b8924",
+			"Rev": "55b8924c2b7c0bbaa1e6518b9d1b3f5c971482a7"
+		}
+	]
+}
