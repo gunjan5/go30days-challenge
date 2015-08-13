@@ -1,0 +1,4 @@
+QUIC is a google's experimental protocol built on top of UDP to overcome latency limitations.
+QUIC is very similar to TCP+TLS+SPDY implemented on UDP. Because TCP is implement in operating system kernels, and middlebox firmware, making significant changes to TCP is next to impossible. However, since QUIC is built on top of UDP, it suffers from no such limitations.
+
+Check out this diagram: http://devsisters.github.io/goquic/images/tcp_network.png
