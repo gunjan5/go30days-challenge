@@ -1,11 +1,9 @@
 package main
 
-
 import (
   "fmt"
   "runtime"
   "time"
-
 )
 
 
@@ -18,9 +16,6 @@ func sayMyName(name string){
 	
 }
 
-
-
-
 func main() {
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
@@ -32,6 +27,10 @@ func main() {
 	go sayMyName("Gopher")
 
 	go sayMyName("Rabbit")
+
+	go sayMyName("aaaaaaaaa")
+
+	go sayMyName("bbbbbbbbbb")
 
 	var input string
 	fmt.Scanln(&input)
