@@ -7,11 +7,14 @@ import (
   "encoding/xml"
   "net/http"
   "time"
+  "runtime"
 )
 
 
 
 func main() {
+
+	runtime.GOMAXPROCS(8)
 
 	start := time.Now()
 	
@@ -25,21 +28,34 @@ func main() {
 		"t",
 		"vz",
 		"tmus",
-		"s",
+		"ibm", 
 	}
+
+	numComplete :=0
+
 	for _,symbol := range stockSymbols {
-		resp,_ := http.Get("http://dev.markitondemand.com/api/v2/quote?symbol="+symbol)
-		defer resp.Body.Close()
 
-		body, _ :=ioutil.ReadAll(resp.Body)
+		go func(symbol string) {
+			resp,_ := http.Get("http://dev.markitondemand.com/api/v2/quote?symbol="+symbol)
+			defer resp.Body.Close()
+			//fmt.Println(resp)
+			body, _ :=ioutil.ReadAll(resp.Body)
+			//fmt.Println(body)
 
-		quote := new(QuoteResponse)
-		xml.Unmarshal(body, &quote)
+			quote := new(QuoteResponse)
+			xml.Unmarshal(body, &quote)
+			//fmt.Println(quote)
 
-		fmt.Printf("%s: %.2f \n", quote.Name, quote.LastPrice)
+			fmt.Printf("%s: %.2f \n", quote.Name, quote.LastPrice)
+			numComplete++
+		}(symbol)
+
 
 	}
 	
+	for numComplete <len(stockSymbols) {
+		time.Sleep(10* time.Millisecond)
+	}
 
 	elapsed:= time.Since(start)
 
