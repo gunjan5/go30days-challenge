@@ -1,1 +1,12 @@
 moar mucking with concurrency in GO
+
+TIL:
+-execution stack for goroutines is very small compared to processor threads stack (2KB vs 1MB)
+-little pressure on the system
+-goroutines (aka green threads) = actors 
+-goroutine memory requirement is much less than processor thread (2KB vs 1MB), go runtime allocates more if needed
+-channels provide typed message communication
+-channels are used to provide synchronization between goroutines
+-channels don't allow sender to modify the message once it's sent
+-GOMAXPROCS lets you assign more logical processors 
+
