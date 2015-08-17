@@ -28,7 +28,7 @@ func main() {
 
 	failedMessage := FailedMessage{
 		ErrorMessage:    "Interrupted by the black riders",
-		OriginalMessage: Message{},
+		OriginalMessage: msg,
 	}
 
 	msgCh <- msg
