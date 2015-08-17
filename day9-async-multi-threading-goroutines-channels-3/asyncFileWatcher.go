@@ -15,6 +15,16 @@ import (
 
 const watchPath = "./watchme"
 
+type Invoice struct{
+
+	Number string
+	Amount float64
+	PONumber int
+	InvoiceDate int
+
+}
+
+
 func main() {
 
 	runtime.GOMAXPROCS(4)
@@ -42,10 +52,7 @@ func main() {
 				 	fmt.Printf("Received invoice '%v' for $%.2f and submitted for processing, PONumber is %v, Date is %v\n",
 				 	 invoice.Number, invoice.Amount, invoice.PONumber, invoice.InvoiceDate)
 				 }
-
 				}(string(data))
-
-
 
 		}
 	}
@@ -53,11 +60,3 @@ func main() {
 }
 
 
-type Invoice struct{
-
-	Number string
-	Amount float64
-	PONumber int
-	InvoiceDate int
-
-}

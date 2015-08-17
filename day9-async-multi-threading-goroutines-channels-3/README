@@ -1,2 +1,5 @@
 more advanced stuff with goroutines, channels etc
 
+1. Run the program
+2. Copy one infoice file from ./invoices dir to ./watchme dir
+3. the program will parse the csv file and print it on the console and delete the invoice 
