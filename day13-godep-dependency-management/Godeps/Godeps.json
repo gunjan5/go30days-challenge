@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/goinggo/newssearch",
+	"GoVersion": "go1.5rc1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/goinggo/workpool",
+			"Rev": "10f0359c48874f2bec5028f036e85ce0cccfe665"
+		}
+	]
+}
