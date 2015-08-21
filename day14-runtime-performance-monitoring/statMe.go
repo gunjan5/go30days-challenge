@@ -20,20 +20,20 @@ func sayMyName(name string) {
 func main() {
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
-
-	fmt.Println("You've got", runtime.NumCPU(), " CPU cores yo!")
-
-	sayMyName("basic")
-
-	go sayMyName("Gopher")
-
 	flag.Parse()
 
-	go sayMyName("Rabbit")
+	fmt.Println("You've got", runtime.NumCPU(), " CPU cores yo!")
+	for i := 0; i < 500; i++ {
+		sayMyName("basic")
 
-	go sayMyName("aaaaaaaaa")
+		go sayMyName("Gopher")
 
-	go sayMyName("bbbbbbbbbb")
+		go sayMyName("Rabbit")
+
+		go sayMyName("aaaaaaaaa")
+
+		go sayMyName("bbbbbbbbbb")
+	}
 
 	var input string
 	fmt.Scanln(&input)
