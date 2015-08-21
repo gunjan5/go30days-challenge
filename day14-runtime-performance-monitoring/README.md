@@ -6,7 +6,7 @@
 -start the gocode and go performance matrix will stream the performance data on the UDP port to StatsD
 
 ##Better option (use StatsD & Graphite Docker image):
--sudo docker run -d --name graphite --restart=always -p 80:80 -p 2003:2003 -p 8125:8125/udp hopsoft/graphite-statsd
+-```docker run -d --name graphite --restart=always -p 80:80 -p 2003:2003 -p 8125:8125/udp hopsoft/graphite-statsd```
 
 -go to your boot2docker IP or localhost to get to Graphite UI
 
@@ -15,5 +15,5 @@
 
 -grab a redbull and enjoy staring at the pretty performance charts :)
 
-![goroutines and gc](http://www.screencast.com/t/ANmuLKej)
-![memory](http://www.screencast.com/t/7rrvMHhYoE)
+![goroutines and gc](https://raw.githubusercontent.com/gunjan5/go30days-challenge/master/day14-runtime-performance-monitoring/goroutines_gc.png)
+![memory](https://raw.githubusercontent.com/gunjan5/go30days-challenge/master/day14-runtime-performance-monitoring/memory.png)
