@@ -1,5 +1,4 @@
-go performance monitoring and displaying them with StatsD
-
+#go performance monitoring and displaying them with StatsD
 -install node.js
 -download and make StatsD
 -Configure config file
@@ -15,3 +14,6 @@ go performance monitoring and displaying them with StatsD
 ```go run statMe.go -statsd=192.168.59.103:8125```
 
 -grab a redbull and enjoy staring at the pretty performance charts :)
+
+![goroutines and gc](http://www.screencast.com/t/ANmuLKej)
+![memory](http://www.screencast.com/t/7rrvMHhYoE)
