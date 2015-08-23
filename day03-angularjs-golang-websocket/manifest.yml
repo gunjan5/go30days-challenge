@@ -1,0 +1,5 @@
+---
+applications:
+- name: chat
+  memory: 64M
+  instances: 1
