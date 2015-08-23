@@ -1,14 +1,9 @@
-#go performance monitoring and displaying them with StatsD
--install node.js
--download and make StatsD
--Configure config file
--start the deamon
--start the gocode and go performance matrix will stream the performance data on the UDP port to StatsD
-
-##Better option (use StatsD & Graphite Docker image):
+#Go performance monitoring and displaying them with StatsD
 -```docker run -d --name graphite --restart=always -p 80:80 -p 2003:2003 -p 8125:8125/udp hopsoft/graphite-statsd```
 
 -go to your boot2docker IP or localhost to get to Graphite UI
+
+-```go get github.com/bmhatfield/go-runtime-metrics```
 
 -start the go code with the boot2docker IP or if it's localhost then dont use any flags 
 ```go run statMe.go -statsd=192.168.59.103:8125```
