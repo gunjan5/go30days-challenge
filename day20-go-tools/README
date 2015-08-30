@@ -1,3 +1,15 @@
 Go tool
 Docker image for easy golang development and vendoring
 
+1. write a nice app in /app directory
+2. Vendor dependancy: docker run --rm -v $PWD:/app -w /app treeder/go vendor
+3. Build: docker run --rm -v $PWD:/app -w /app treeder/go build
+4. Run it: docker run --rm -v $PWD:/app -w /app -p 8080:8080 iron/base ./app
+5. Runnable docker images: docker run --rm -v $PWD:/app -w /app -v /var/run/docker.sock:/var/run/docker.sock treeder/go image username/myapp:latest
+6. Run yo fresh image: docker run --rm -v $PWD:/app -w /app -p 8080:8080 username/myapp
+7. Go to localhost:8080 (or <boot2docker_IP>:8080)
+8. Build a remote repo
+
+Ref: https://medium.com/iron-io-blog/the-easiest-way-to-develop-with-go-introducing-a-docker-based-go-tool-c456238507d6
+
+
