@@ -1,0 +1,2 @@
+hi this is golang program, I'm trying to write to you Miss writeMe.txt, hope you like it!
+

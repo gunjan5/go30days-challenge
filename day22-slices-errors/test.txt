@@ -1,0 +1,7 @@
+yello human 
+
+welcome to my file
+
+my file's name is test.txt
+
+this is for my golang 30days challenge
