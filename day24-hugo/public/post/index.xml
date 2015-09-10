@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Posts on Gunjan&#39;s Hugo Site </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://localhost:1313/post/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Thu, 10 Sep 2015 02:01:35 PDT</updated>
+    
+    <item>
+      <title>intro</title>
+      <link>http://localhost:1313/post/intro/</link>
+      <pubDate>Thu, 10 Sep 2015 02:01:35 PDT</pubDate>
+      
+      <guid>http://localhost:1313/post/intro/</guid>
+      <description>
+
+&lt;p&gt;Using Hugo to create a website&lt;/p&gt;
+
+&lt;h2 id=&#34;steps:34c4da6d4768d05e50db99357a299b5c&#34;&gt;Steps:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1. brew install hugo&lt;/li&gt;
+&lt;li&gt;2. cd /path/to/day24-hugo&lt;/li&gt;
+&lt;li&gt;3. hugo new site .  (make sure the directory is empty, can&amp;rsquo;t even have hidden .files)&lt;/li&gt;
+&lt;li&gt;4. hugo new post/intro.md&lt;/li&gt;
+&lt;li&gt;5. clone the theme into themes/&lt;theme_name&gt; (git clone &lt;a href=&#34;https://github.com/SenjinDarashiva/hugo-uno.git&#34;&gt;https://github.com/SenjinDarashiva/hugo-uno.git&lt;/a&gt; themes/hugo-uno)&lt;/li&gt;
+&lt;li&gt;6. Change config.toml (add theme = &amp;ldquo;hugo-uno&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;7. go to content&amp;gt;post&amp;gt;intro.md and append the blog post content and remove the draft = true line&lt;/li&gt;
+&lt;li&gt;8. run the server by &lt;code&gt;hugo server -w&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;9. Open a browser window and go to localhost:1313&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

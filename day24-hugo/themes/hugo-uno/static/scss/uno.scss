@@ -1,0 +1,50 @@
+@import 'bourbon/bourbon';
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), local('Ubuntu'), url(../fonts/Ubuntu-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Source Serif Pro', serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('Source Serif Pro'), url(../fonts/SourceSerifPro-Regular.otf) format('otf');
+}
+// ------------------------------
+// THE BASICS
+// ------------------------------
+
+@import 'reset.scss';
+@import 'grid.scss';
+@import 'variables.scss';
+@import 'fontawsome/scss/font-awesome.scss';
+
+// ------------------------------
+// GLOBAL STYLES
+// ------------------------------
+
+@import 'global.scss';
+
+// ------------------------------
+// SECTIONS
+// ------------------------------
+
+@import 'sections/post.scss';
+
+// ------------------------------
+// COMPONENTS
+// ------------------------------
+
+@import 'components/panels.scss';
+@import 'components/buttons.scss';
+@import 'components/navigation.scss';
+@import 'components/pagination.scss';
+@import 'components/post-list.scss';
+
+// ------------------------------
+// MEDIA QUERIES
+// ------------------------------
+
+@import 'media-queries.scss';
+

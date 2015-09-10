@@ -1,0 +1,16 @@
+name = "Hugo-Uno"
+license = "Creative Commons Attribution 4.0 International"
+licenselink = "https://creativecommons.org/licenses/by/4.0/"
+description = "An elegant open source and mobile first theme"
+homepage = "https://github.com/SenjinDarashiva/hugo-uno"
+tags = ["Responsive", "Awesome fonts", "Chart.js", "Lightbox", "gallery"]
+features = ["blog", ]
+
+[author]
+    name = "Fredrik Loch"
+    homepage = "http://fredrikloch.me"
+
+[original]
+    author =  "daleanthony"
+    homepage = "http://daleanthony.com/"
+    repo = "https://github.com/daleanthony/Uno"
