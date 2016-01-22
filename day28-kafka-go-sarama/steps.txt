@@ -1,0 +1,22 @@
+
+docker-compose stop
+docker-compose rm
+y
+docker-compose kill
+
+docker-compose up
+
+
+(optional NewWindow) docker-compose scale kafka=2
+
+(NewWindow) ./start-kafka-shell.sh 192.168.59.103 172.17.0.2:2181      // start-kafka-shell.sh <DOCKER_HOST_IP> <ZK_HOST:ZK_PORT>
+$KAFKA_HOME/bin/kafka-topics.sh --create --topic topic1 --partitions 1 --zookeeper $ZK --replication-factor 1
+$KAFKA_HOME/bin/kafka-topics.sh --describe --topic topic1 --zookeeper $ZK
+$KAFKA_HOME/bin/kafka-console-producer.sh --topic=topic1 --broker-list=`broker-list.sh`
+
+
+(NewWindow) ./start-kafka-shell.sh 192.168.59.103 172.17.0.2:2181
+$KAFKA_HOME/bin/kafka-console-consumer.sh --topic=topic1 --zookeeper=$ZK
+
+
+

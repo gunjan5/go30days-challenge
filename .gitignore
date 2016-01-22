@@ -1,2 +1,20 @@
 
 *.wal
+
+.idea/.name
+
+.idea/encodings.xml
+
+.idea/go30days-challenge.iml
+
+.idea/libraries/Go_SDK.xml
+
+.idea/libraries/GOPATH__go30days_challenge_.xml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/vcs.xml
+
+.idea/workspace.xml
