@@ -1,2 +1,5 @@
 Playing with Goroutines and basics of channels
 More stuff on channels tmrw
+
+to check if your code has a race condition, run it with the `-race` flag
+`go run -race main.go`
