@@ -1,0 +1,15 @@
+nav,
+a.seal,
+.siteheadersearchandtoggles,
+.sitefooter {
+  display: none !important;
+}
+
+a[href]:after {
+  display: none;
+}
+
+.siteheader {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
