@@ -6,14 +6,17 @@ import (
 	"sync"
 )
 
+func init() {
+	runtime.GOMAXPROCS(runtime.NumCPU())
+}
+
 func main() {
 
-	runtime.GOMAXPROCS(4)
 	mutex := new(sync.Mutex)
 
-	for i := 1; i < 10; i++ {
+	for i := 0; i < 10; i++ {
 		//fmt.Println(i)
-		for j := 1; j < 10; j++ {
+		for j := 0; j < 10; j++ {
 			mutex.Lock()
 			go func() {
 				fmt.Printf("%d %d\n", i, j)
