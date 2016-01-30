@@ -31,7 +31,7 @@ func incr(s string) {
 	for i := 0; i < 50; i++ {
 		x:=globalcounter
 		x++
-		time.Sleep(time.Duration(rand.Intn(2))*time.Millisecond)
+		time.Sleep(rand.Intn(2)*time.Millisecond) //OR runtime.Gosched() //Gosched yields the processor, allowing other goroutines to run. It does not suspend the current goroutine, so execution resumes automatically.
 		globalcounter = x
 		fmt.Println(s, i, "counter:", globalcounter)
 	}

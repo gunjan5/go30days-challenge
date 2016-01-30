@@ -28,7 +28,7 @@ func main() {
 func incrementor(s string) {
 	for i := 0; i < 10000; i++ {
 		runtime.Gosched() //Gosched yields the processor, allowing other goroutines to run. It does not suspend the current goroutine, so execution resumes automatically.
-		//Alternative to Gosched() is //time.Sleep(time.Duration(rand.Intn(2))*time.Millisecond)
+		//Alternative to Gosched() is //time.Sleep(rand.Intn(2)*time.Millisecond)
 
 		atomic.AddInt64(&count, 1)
 		//count++
