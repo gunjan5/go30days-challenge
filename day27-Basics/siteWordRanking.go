@@ -1,29 +1,25 @@
+//See the Zipf's curve in action
+
 package main
 
 import (
 	"bufio"
-	"bytes"
 	"fmt"
-	"io/ioutil"
 	"net/http"
+	"sort"
 	"strings"
 )
 
 func main() {
+	zipf := make([]int, 0)
 
 	words := make(map[string]int)
 	resp, _ := http.Get("https://blog.golang.org")
 
 	defer resp.Body.Close()
 
-	respBody, _ := ioutil.ReadAll(resp.Body)
-
-	//fmt.Println(string(respBody))
-	r := bytes.NewReader(respBody)
-
-	scanner := bufio.NewScanner(r)
+	scanner := bufio.NewScanner(resp.Body)
 	for scanner.Scan() {
-		//fmt.Println(scanner.Text()) // Println will add back the final '\n'
 		wScanner := bufio.NewScanner(strings.NewReader(scanner.Text()))
 		wScanner.Split(bufio.ScanWords)
 
@@ -37,8 +33,18 @@ func main() {
 
 		}
 	}
-for k,v := range words{
-	fmt.Println(k, " : ", v)
-}
+	for k, v := range words {
+		if v > 50 {
+			fmt.Println(k, " : ", v)
+			zipf=append(zipf, v)
+
+		}
+	}
+
+	sort.Ints(zipf)
+
+	for _, v := range zipf {
+		fmt.Println(v)
+	}
 
 }
