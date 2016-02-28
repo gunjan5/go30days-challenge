@@ -25,7 +25,7 @@ func main() {
 
 	fmt.Println("answer to all questions is: ", obj["ans_to_life"])
 
-	v, ok := obj["ans_to_life"].(float64)//v, ok := obj["best_pokemon"].(float64) //asserting the type to float64
+	v, ok := obj["ans_to_life"].(float64) //v, ok := obj["best_pokemon"].(float64) //asserting the type to float64
 	if !ok {
 		v = 0 //take default value instead of panicing & log error
 		log.Println("ay man, we've got an issue with asserting the data type, but I'll work something out instead of panicing :) ")
