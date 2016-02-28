@@ -1,12 +1,22 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/gorilla/mux"
 )
+
+type Todo struct {
+	Name      string    `json:"name"`
+	Completed bool      `json:"completed"`
+	Due       time.Time `json:"due"`
+}
+
+type Todos []Todo
 
 func main() {
 
@@ -24,7 +34,12 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Todo Index!")
+	todos := Todos{
+		Todo{Name: "eat some chocolate"},
+		Todo{Name: "eat some more chocolate"},
+	}
+
+	json.NewEncoder(w).Encode(todos)
 }
 
 func TodoShow(w http.ResponseWriter, r *http.Request) {
