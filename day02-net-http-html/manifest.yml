@@ -1,0 +1,5 @@
+---
+applications:
+- name: gunjan-wiki
+  disk: 256M
+  memory: 128M

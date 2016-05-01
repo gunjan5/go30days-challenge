@@ -5,9 +5,14 @@ import (
 	"io/ioutil"
 	"net/http"
 	"regexp"
+	"os"
+        "log"
 )
 
 const lenPath = len("/view/")
+const (
+    DEFAULT_PORT = "9000"
+)
 var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
 var titleValidator = regexp.MustCompile("^[a-zA-Z0-9]+$")
 
@@ -70,10 +75,15 @@ func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 }
 
 func main() {
+var port string
+    if port = os.Getenv("PORT"); len(port) == 0 {
+        log.Printf("Warning, PORT not set. Defaulting to %+vn", DEFAULT_PORT)
+        port = DEFAULT_PORT
+}
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":" + port, nil)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {

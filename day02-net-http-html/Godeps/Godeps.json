@@ -1,0 +1,5 @@
+{
+	"ImportPath": "go30days-challenge/day02-net-http-html",
+	"GoVersion": "go1.4",
+	"Deps": []
+}
